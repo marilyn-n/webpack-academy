@@ -1,0 +1,16 @@
+{
+  "name": "webpack-academy-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.25.1",
+    "yarn": "^1.12.3"
+  }
+}
