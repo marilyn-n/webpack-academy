@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/bar-cjs.js":
+/*!************************!*\
+  !*** ./src/bar-cjs.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"bar\";\n\n\n//# sourceURL=webpack:///./src/bar-cjs.js?");
+
+/***/ }),
+
 /***/ "./src/foo.js":
 /*!********************!*\
   !*** ./src/foo.js ***!
@@ -106,7 +117,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _foo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./foo.js */ \"./src/foo.js\");\nconsole.log('Hello from webpack academy!!!!');\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _foo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./foo.js */ \"./src/foo.js\");\n/* harmony import */ var _bar_cjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bar-cjs */ \"./src/bar-cjs.js\");\n/* harmony import */ var _bar_cjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_bar_cjs__WEBPACK_IMPORTED_MODULE_1__);\nconsole.log('Hello from webpack academy!!!!');\n\n\n \n\nconsole.log(_foo_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"], _bar_cjs__WEBPACK_IMPORTED_MODULE_1___default.a);\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
