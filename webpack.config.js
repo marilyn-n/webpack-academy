@@ -3,7 +3,7 @@ const ExamplePlugin = require('./ExamplePlugin');
 const webpack = require('webpack');
 
 module.exports = (env) => {
-  console.log(env);
+  console.log('This is the env value:::::::::::::::::', env);
   return {
     entry: './src/index.js',
     mode: 'development',
