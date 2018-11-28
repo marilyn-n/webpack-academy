@@ -2,27 +2,26 @@ const path = require('path');
 const ExamplePlugin = require('./ExamplePlugin');
 const webpack = require('webpack');
 
-module.exports = {
-  entry: './src/index.js',
-  mode: 'development',
-  output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
+module.exports = (env) => {
+  console.log(env);
+  return {
+    entry: './src/index.js',
+    mode: 'development',
+    output: {
+      filename: 'bundle.js',
+      path: path.join(__dirname, 'dist'),
+    },
+    module: {
+      rules: [{
         test: /\.jpe?g$/,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
-      },
+        use: [{
+          loader: 'file-loader',
+        }, ],
+      }, ],
+    },
+    plugins: [
+      new ExamplePlugin(),
+      new webpack.ContextReplacementPlugin(),
     ],
-  },
-  plugins: [
-    new ExamplePlugin(),
-    new webpack.ContextReplacementPlugin(),
-  ],
+  }
 };

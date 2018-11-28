@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:log": "npm run-script build -- --env=1",
     "build": "webpack --verbose",
     "watch": "npm run-script build -- --watch"
   },
