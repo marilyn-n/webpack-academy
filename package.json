@@ -12,6 +12,7 @@
     "build:prod:bundleanalyze": "npm run-script build:prod -- --env.addons=bundleanalyze",
     "build:dev:watch": "npm run-script build:watch -- --env.env=dev",
     "build:prod:watch": "npm run-script build:watch -- --env.env=prod",
+    "build:prod:firstplugin": "npm run-script build:prod -- --env.addons=firstplugin",
     "build:dev:log": "npm run-script build:dev -- --env=1",
     "build:prod:log": "npm run-script build:prod -- --env=1",
     "build:log": "npm run-script build -- --env=1",
