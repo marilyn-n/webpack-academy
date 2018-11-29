@@ -1,27 +1,6 @@
-const path = require('path');
-const ExamplePlugin = require('./ExamplePlugin');
-const webpack = require('webpack');
+const commonConfig = require('./build_utils/webpack.common');
 
 module.exports = (env) => {
-  console.log('This is the env value:::::::::::::::::', env);
-  return {
-    entry: './src/index.js',
-    mode: 'development',
-    output: {
-      filename: 'bundle.js',
-      path: path.join(__dirname, 'dist'),
-    },
-    module: {
-      rules: [{
-        test: /\.jpe?g$/,
-        use: [{
-          loader: 'file-loader',
-        }, ],
-      }, ],
-    },
-    plugins: [
-      new ExamplePlugin(),
-      new webpack.ContextReplacementPlugin(),
-    ],
-  }
+  console.log(env);
+  return commonConfig;
 };
