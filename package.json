@@ -20,7 +20,9 @@
     "build:prod": "npm run-script build -- --env.env=prod",
     "build:watch": "npm run-script build -- --watch",
     "build": "webpack --verbose",
-    "watch": "npm run-script build -- --watch"
+    "watch": "npm run-script build -- --watch",
+    "debug:prod": "npm run-script debug -- --env.env=prod",
+    "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js"
   },
   "author": "",
   "license": "ISC",
