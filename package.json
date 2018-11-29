@@ -5,8 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev:bundlebuddy": "npm run-script build:dev -- --env.addons=bundlebuddy",
+    "build:dev:bundlebuddyanalyze": "npm run-script build:dev -- --env.addons=bundlebuddy --env.addons=bundleanalyze",
+    "build:dev:bundleanalyze": "npm run-script build:dev -- --env.addons=bundleanalyze",
+    "build:prod:bundlebuddy": "npm run-script build:prod -- --env.addons=bundlebuddy",
+    "build:prod:bundleanalyze": "npm run-script build:prod -- --env.addons=bundleanalyze",
+    "build:dev:watch": "npm run-script build:watch -- --env.env=dev",
+    "build:prod:watch": "npm run-script build:watch -- --env.env=prod",
+    "build:dev:log": "npm run-script build:dev -- --env=1",
+    "build:prod:log": "npm run-script build:prod -- --env=1",
     "build:log": "npm run-script build -- --env=1",
-    "build:watch:dev": "npm run-script build:watch -- --env.env=dev",
+    "build:dev": "npm run-script build -- --env.env=dev",
+    "build:prod": "npm run-script build -- --env.env=prod",
     "build:watch": "npm run-script build -- --watch",
     "build": "webpack --verbose",
     "watch": "npm run-script build -- --watch"
@@ -20,6 +30,7 @@
     "file-loader": "^2.0.0",
     "source-map": "^0.7.3",
     "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-merge": "^4.1.4",
     "yarn": "^1.12.3"
   },
