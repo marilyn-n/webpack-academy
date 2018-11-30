@@ -14,9 +14,7 @@ const config = {
   },
   plugins: [
     new ExtractTextWebpackPlugin('styles.css'),
-    new UglifyJsWebpackPlugin({
-      sourcemap: true,
-    }),
+    new UglifyJsWebpackPlugin(),
   ],
 
 };
