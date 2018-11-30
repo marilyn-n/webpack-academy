@@ -19,7 +19,7 @@
     "build:dev": "npm run-script build -- --env.env=dev",
     "build:prod": "npm run-script build -- --env.env=prod",
     "build:watch": "npm run-script build -- --watch",
-    "build": "webpack --verbose",
+    "build": "webpack --verbose --env.env=prod",
     "watch": "npm run-script build -- --watch",
     "debug:prod": "npm run-script debug -- --env.env=prod",
     "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js"
@@ -34,6 +34,7 @@
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "source-map": "^0.7.3",
+    "uglifyjs-webpack-plugin": "^1.0.0-rc.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.25.1",
     "webpack-bundle-analyzer": "^3.0.3",
